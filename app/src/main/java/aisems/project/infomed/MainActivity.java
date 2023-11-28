@@ -1,3 +1,9 @@
+/**
+ * Original InfoMed created by David Christiansen in November 2023
+ * for UTSA AIS Smart Design Project.
+ *
+ * Credits for original app idea belong to David Christiansen, Joyce Njabi, and Matti Pruitt.
+ */
 package aisems.project.infomed;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,13 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Button clickedButton = (Button) view;
         String buttonText = clickedButton.getText().toString().toLowerCase();
-        if (buttonText.equalsIgnoreCase("alerts")) {
-            Intent alertsIntent = new Intent(MainActivity.this, AlertsActivity.class);
-            startActivity(alertsIntent);
-        } else if (buttonText.equalsIgnoreCase("search") || buttonText.equalsIgnoreCase("try our tool here!")) {
+        if (buttonText.equalsIgnoreCase("search") || buttonText.equalsIgnoreCase("try our tool here!")) {
             Intent toolIntent = new Intent(MainActivity.this, ToolActivity.class);
             startActivity(toolIntent);
-        } //else if (buttonText.equalsIgnoreCase("settings")) {  ---> TO BE IMPLEMENTED AT A LATER DATE. <---
+        } // else if (buttonText.equalsIgnoreCase("alerts")) { ---> TO BE IMPLEMENTED AT A LATER DATE. <---
+            // Intent alertsIntent = new Intent(MainActivity.this, AlertsActivity.class);
+            // startActivity(alertsIntent);
+        //} else if (buttonText.equalsIgnoreCase("settings")) {  ---> TO BE IMPLEMENTED AT A LATER DATE. <---
            // Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
             // startActivity(settingsIntent);
         //}
